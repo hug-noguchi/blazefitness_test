@@ -6,7 +6,7 @@
 		<div class="p_access_lead">
 			<p class="p_access_lead_main">馬込駅から徒歩<span class="nunito">5</span>分</p>
 			<p class="p_access_lead_sub">都営浅草線「馬込駅」<br><span class="nunito">A1</span>出口右手の道を進み徒歩<span class="nunito">5</span>分</p>
-			<p class="p_access_lead_notice">※A1出口から右手に進みましたら、大通りの向こう側へ一度渡る必要がございますのでお気をつけくださいませ。</p>
+			<p class="p_access_lead_notice">※A1出口から右手に進みましたら、大通りの向こう側へ一度渡る必要がございますのでお気をつけくださいませ。<br>当店は環七沿い「しゃぶしゃぶ温野菜 馬込店」さんの下の階にございます。</p>
 		</div>
 		<div class="p_access_address">
 			<dl>
