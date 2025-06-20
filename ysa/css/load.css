@@ -1,0 +1,114 @@
+@-webkit-keyframes loading_text {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading_text {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes loading_bar {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(100%) scaleX(0);
+  }
+  50% {
+    transform: translateX(0) scaleX(1);
+  }
+  75% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+@keyframes loading_bar {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(100%) scaleX(0);
+  }
+  50% {
+    transform: translateX(0) scaleX(1);
+  }
+  75% {
+    transform: translateX(-100%) scaleX(0);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+.l_load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, #000, #111);
+  transition: 1s;
+}
+.l_load .l_loading {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+.l_load .l_loading .l_loading_text {
+  margin-bottom: 15px;
+  color: #eee;
+  font-size: 14px;
+  line-height: 1;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  text-align: center;
+  -webkit-animation: loading_text 1s linear infinite;
+          animation: loading_text 1s linear infinite;
+}
+.l_load .l_loading .l_loading_bar {
+  position: relative;
+}
+.l_load .l_loading .l_loading_bar::before {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 30%;
+  width: 40%;
+  height: 1px;
+  background: #eee;
+  content: "";
+  -webkit-animation: loading_bar 2s linear infinite;
+          animation: loading_bar 2s linear infinite;
+}
+@media (min-width: 1000px) {
+  .l_load .l_loading .l_loading_bar::before {
+    left: 40%;
+    width: 20%;
+  }
+}
+.l_load.js_end {
+  visibility: hidden;
+  opacity: 0;
+  filter: blur(5px);
+}
+.l_load.js_end .l_loading {
+  opacity: 0;
+}
+/*# sourceMappingURL=load.css.map */
